@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul 1 - Virtual Lab</title>
+    <link rel="stylesheet" href="modulstyles.css">
+    <script type="module" src="modulscript.js" defer></script>
+</head>
+
+<body>
+    <!-- Progress Sidebar -->
+    <div class="sidebar">
+        <h2>Progress</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <ul id="progress-list">
+            <li class="section-item" data-section="1">🔲 Bagian 1</li>
+            <li class="section-item locked" data-section="2">🔲 Bagian 2</li>
+            <li class="section-item locked" data-section="3">🔲 Bagian 3</li>
+            <li class="section-item locked" data-section="4">🔲 Latihan</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <!-- Section 1 -->
+        <div id="section1" class="section-content active">
+            <div class="section-header">
+                <a href="index.html" class="back-button">
+                    <span class="back-arrow">←</span>
+                </a>
+                <h1>Bagian 1</h1>
+            </div>
+            <div class="spacer">Content for Section 1</div>
+            <div class="spacer">More content for Section 1...</div>
+            <div class="spacer">Final content for Section 1</div>
+            <div id="bottom-marker-1"></div>
+            <div class="next-section-link">Go to the next part</div>
+        </div>
+
+        <!-- Section 2 -->
+        <div id="section2" class="section-content">
+            <div class="section-header">
+                <button class="back-button" onclick="goToSection(1)">
+                    <span class="back-arrow">←</span>
+                </button>
+                <h1>Bagian 2</h1>
+            </div>
+            <div class="spacer">Content for Section 2</div>
+            <div class="spacer">More content for Section 2...</div>
+            <div class="spacer">Final content for Section 2</div>
+            <div id="bottom-marker-2"></div>
+            <div class="next-section-link">Go to the next part</div>
+        </div>
+
+        <!-- Section 3 -->
+        <div id="section3" class="section-content">
+            <div class="section-header">
+                <button class="back-button" onclick="goToSection(2)">
+                    <span class="back-arrow">←</span>
+                </button>
+                <h1>Bagian 3</h1>
+            </div>
+            <div class="spacer">Content for Section 3</div>
+            <div class="spacer">More content for Section 3...</div>
+            <div class="spacer">Final content for Section 3</div>
+            <div id="bottom-marker-3"></div>
+            <div class="next-section-link">Go to the next part</div>
+        </div>
+
+        <!-- Section 4 (Quiz) -->
+        <div id="section4" class="section-content">
+            <div class="section-header">
+                <button class="back-button" onclick="goToSection(3)">
+                    <span class="back-arrow">←</span>
+                </button>
+                <h1>Latihan</h1>
+            </div>
+            <div class="quiz-container">                <!-- Question 1 -->
+                <div class="question-container">
+                    <p>1. The process of converting source code into machine code is called <div class="drop-zone" data-answer="compilation"></div>.</p>
+                    <div class="options-container">
+                        <div class="draggable-option" draggable="true">interpretation</div>
+                        <div class="draggable-option" draggable="true">compilation</div>
+                        <div class="draggable-option" draggable="true">execution</div>
+                        <div class="draggable-option" draggable="true">translation</div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-container">
+                    <p>2. The temporary storage area in a computer that holds data being processed is called <div class="drop-zone" data-answer="RAM"></div>.</p>
+                    <div class="options-container">
+                        <div class="draggable-option" draggable="true">ROM</div>
+                        <div class="draggable-option" draggable="true">RAM</div>
+                        <div class="draggable-option" draggable="true">CPU</div>
+                        <div class="draggable-option" draggable="true">Cache</div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-container">
+                    <p>3. A <div class="drop-zone" data-answer="loop"></div> is used to repeat a block of code multiple times in programming.</p>
+                    <div class="options-container">
+                        <div class="draggable-option" draggable="true">loop</div>
+                        <div class="draggable-option" draggable="true">function</div>
+                        <div class="draggable-option" draggable="true">variable</div>
+                        <div class="draggable-option" draggable="true">array</div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-container">
+                    <p>4. The process of finding and fixing errors in a program is called <div class="drop-zone" data-answer="debugging"></div>.</p>
+                    <div class="options-container">
+                        <div class="draggable-option" draggable="true">coding</div>
+                        <div class="draggable-option" draggable="true">debugging</div>
+                        <div class="draggable-option" draggable="true">compiling</div>
+                        <div class="draggable-option" draggable="true">testing</div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-container">
+                    <p>5. A <div class="drop-zone" data-answer="variable"></div> is a container that stores data in a program.</p>
+                    <div class="options-container">
+                        <div class="draggable-option" draggable="true">function</div>
+                        <div class="draggable-option" draggable="true">class</div>
+                        <div class="draggable-option" draggable="true">variable</div>
+                        <div class="draggable-option" draggable="true">method</div>
+                    </div>
+                </div>
+
+                <button class="submit-btn" disabled>Submit Answers</button>
+                
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Checking your answers...</p>
+                </div>
+
+                <div class="result-container">
+                    <div class="score"></div>
+                    <div class="answer-review"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modified notification with more specific class -->
+    <div id="completion-notification" class="notification">
+        You've finished this section! 🎉
+    </div>
+
+    <div id="initial-loading" class="full-page-loading">
+        <div class="loading-spinner"></div>
+        <p>Loading your progress...</p>
+    </div>
+</body>
+</html>

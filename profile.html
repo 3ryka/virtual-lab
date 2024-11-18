@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profilestyles.css">
+    <script type="module" src="firebase3.js" defer></script>
+    <title>Profile</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="navname">Fun4Eng</a>
+            <ul class="navmenu">
+                <li class="navitem">
+                    <a href=index.html class="navlink">Home</a>
+                </li>
+                <li class="navitem">
+                    <a href="#about" class="navlink">Modules</a>
+                </li>
+                <li class="navitem">
+                    <a href="index.html #contact" class="navlink">About</a>
+                </li>
+                <li class="navitem">
+                    <a href="profile.html" class="navlink" id="profile-link">Profile</a>
+                </li>                
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome, <span id="display-name">User</span>!</h1>
+        <p>Email: <span id="email"></span></p>
+        
+        <div class="input-group">
+            <label for="new-display-name">Change Display Name:</label>
+            <input type="text" id="new-display-name" placeholder="Enter new name">
+            <button id="save-name">Save</button>
+        </div>
+        
+        <h2>Module Progress</h2>
+        <ul id="module-progress">
+            <!-- Progress data will be dynamically loaded -->
+        </ul>
+
+        <h2>Quiz Scores</h2>
+        <ul id="quiz-scores">
+            <!-- Quiz data will be dynamically loaded -->
+        </ul>
+    </main>
+
+    <footer>
+        <button id="logout-button" class="logout-button">Logout</button>
+    </footer>
+</body>
+</html>

@@ -21,6 +21,9 @@
                 <li class="navitem">
                     <a href="#contact" class ="navlink">About</a>
                 </li>
+                <li class="navitem">
+                    <a href="#" class ="navlink" id="profile-link">Profile</a>
+                </li>                
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -30,59 +33,86 @@
         </nav>
     </header>
 
-    <section id="home" class="home-section">
-        <img src="studying_edited.jpg" alt="Learning English" class="background-image" />
-        <div class="home-content">
-          <h1>Learn English with Fun!</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu in luctus feugiat.</p>
-          <button class="btn1"><span>Get Started</span></button>
-        </div>
-      </section>
+<!-- Home Section -->
+<div id="home" class="home-section">
+    <img src="studying_edited.jpg" alt="Learning English" class="background-image" />
+    <div class="home-content">
+        <h1>Learn English with Fun!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu in luctus feugiat.</p>
+        <button class="btn1" id="getstarted-button"><span>Get Started</span></button>
+    </div>
+</div>
 
-    <section id="about">
-        <h2>About Our Modules</h2>
-        <div id="cardarea">
-            <div class="wrapper">
-                <div class="boxarea">
-                    <!-- Card 1 -->
-                    <div class="box">
-                        <img src="studying.jpg" alt="The Basics">
-                        <div class="overlay">
-                            <h3>The Basics</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a href="module1.html" class="btn1"><span>Enter Module</span></a>
-                        </div>
-                    </div>
-    
-                    <!-- Card 2 -->
-                    <div class="box">
-                        <img src="studying.jpg" alt="Intermediate">
-                        <div class="overlay">
-                            <h3>Intermediate</h3>
-                            <p>Curabitur non nulla sit amet nisl tempus convallis.</p>
-                            <a href="module2.html" class="btn1"><span>Enter Module</span></a>
-                        </div>
-                    </div>
-    
-                    <!-- Card 3 -->
-                    <div class="box">
-                        <img src="studying.jpg" alt="Advanced">
-                        <div class="overlay">
-                            <h3>Advanced</h3>
-                            <p>Pellentesque in ipsum id orci porta dapibus.</p>
-                            <a href="module3.html" class="btn1"><span>Enter Module</span></a>
-                        </div>
-                    </div>
-                </div>
+<!-- About Section -->
+<div id="about">
+    <h2>Learning Modules</h2>
+    <div class="module-container">
+        <div class="module-card">
+            <img src="reading_cropped.jpg" alt="Module 1">
+            <div class="module-content">
+                <h3>Module 1</h3>
+                <button class="enter-button" onclick="window.location.href='modul1.html';">Enter</button>
             </div>
         </div>
-    </section>
+        <div class="module-card">
+            <img src="writing_cropped.jpg" alt="Module 2">
+            <div class="module-content">
+                <h3>Module 2</h3>
+                <button class="enter-button">Enter</button>
+            </div>
+        </div>
+        <div class="module-card">
+            <img src="typing_cropped.png" alt="Module 3">
+            <div class="module-content">
+                <h3>Module 3</h3>
+                <button class="enter-button">Enter</button>
+            </div>
+        </div>
+    </div>
+</div>
+      
 
-    <section id="contact">
-        <h1>Contact Us</h1>
-        <p>Reach out to us for any inquiries or feedback!</p>
-    </section>
+<!-- Contact Section -->
+<div id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="contact-card">
+                <h3>Campus Address</h3>
+                <p>Engineering Building</p>
+                <p>123 University Street</p>
+                <p>Jakarta, Indonesia 12345</p>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="contact-card">
+                <h3>Contact Information</h3>
+                <p>Email: info@fun4eng.edu</p>
+                <p>Phone: +62 21 1234 5678</p>
+                <p>Fax: +62 21 1234 5679</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Social Media</h3>
+                <p>Follow us on:</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/fun4eng" target="_blank">Instagram</a>
+                    <a href="https://facebook.com/fun4eng" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/fun4eng" target="_blank">Twitter</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Operating Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+<script type="module" src="firebase2.js"></script>
 </body>
+
 </html>
+
